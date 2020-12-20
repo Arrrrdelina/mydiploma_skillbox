@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0">
+	<title>Моё портфолио</title>
+	<link rel="stylesheet" type="text/css" href="libs/swiper.min.css">
+	<link rel="stylesheet" type="text/css" href="styles.css">
+
+
+	<link rel="apple-touch-icon" sizes="180x180" href="icons/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="icons/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="icons/favicon-16x16.png">
+	<link rel="mask-icon" href="icons/safari-pinned-tab.svg" color="#5bbad5">
+	<meta name="msapplication-TileColor" content="#da532c">
+	<meta name="theme-color" content="#ffffff">
+</head>
+<body>
+
+	
+
+	<div class="modals">
+		<div class="modal-overlay">
+		<form class="form" action="mail.php" enctype="multipart/form-data" method="POST">
+			<div class="modal modal--1" data-target="one">
+					<p class="modal_start">Ваши контакты для связи</p>
+					<input type="hidden" name="admin_email[]" value="gevorkyan.adelina@yandex.ru">
+        			<input type="hidden" name="form_subject" value="Заявка с сайта Сайт">
+					<div class="modal__block">
+						<label class="modal__label">Имя</label>
+						<input type="text" name="fio" data-validate-field="fio" class="forms modal_name" id="form_modal">
+					</div>
+
+					<div class="modal__block">
+						<label class="modal__label">Почта</label>
+						<input type="email" name="email" data-validate-field="email" class="forms modal_mail" id="form_modal">
+					</div>
+
+					<div class="modal__block">
+						<label class="modal__label">Телефон</label>
+						<input type="tel" name="tel" data-validate-field="tel" class="forms modal_tel" id="form_modal">	
+					</div>
+
+					<button class="modal__button" data-path="two" type="submit">Заказать звонок</button>					
+			</div>
+		</form>
+			<div class="send" data-target="two">
+				<h3>Данные отправлены</h3>
+			</div>
+		</div>
+	</div>
+
+	<header class="header">
+		<div class="header__overlay"></div>
+
+		<div class="header__flexblock container">
+
+			<button class="burger header__menu-mobile">
+					<span></span>
+				</button>
+
+			<nav class="header__nav-menu nav mobile__menu">
+				<ul class="menu header__list">
+
+					<li class="menu__item header__menu header__menu-item">
+						<a href="#work" class="nav__link">Услуги</a>
+					</li>
+					<li class="menu__item header__menu header__menu-item">
+						<a href="#portfolio" class="nav__link">Портфолио</a>
+					</li>
+					<li class="menu__item header__menu header__menu-item">
+						<a href="#unit" class="nav__link">Стоимость</a>
+					</li>
+				</ul>
+			</nav>
+
+			<a class="contacts header__contacts-tel" href="tel:+7(499)995-77-55">+7 (499) 995-55-77</a>
+
+			<button class="button btn btn--border header__contacts button-reset btnOff" data-path="one">Заказать звонок</button>
+		</div>
+	</header>
+
+	<main class="main">
+		<section class="preview">
+			<div class="container preview__info">
+				<div class="preview__fly-symbols">
+					<span class="fly-tag fly-preview fly-preview--braces"> {&nbsp;} </span>
+					<span class="fly-tag fly-preview fly-preview--div"> &lt;div&gt; </span>
+					<span class="fly-tag fly-preview fly-preview--hash"> # </span>
+					<span class="fly-tag fly-preview fly-preview--div2"> &lt;div&gt; </span>
+					<span class="fly-tag fly-preview fly-preview--closed"> &lt;/&gt; </span>
+				</div>
+
+
+				<div class="preview__about">
+					<h1 class="preview__name-text">Дмитрий Алексеев
+
+						<span class="preview__name-text-info">
+							Frontend-разработчик и веб-верстальщик
+						</span>
+
+					</h1>
+					<button class="button btn btn--fill preview__btn button-reset btnOff" data-path="one">Узнать больше</button>
+				</div>
+			
+				<img class="preview__photo-img" src="img/test.png" alt="Фото разработчика">
+			</div>
+
+			<picture>
+				<img src="img/back.svg" alt="ellipse" class="preview__back">
+			</picture>
+		</section>
+
+
+
+		<section class="work" id="work"> <!--ЧТО Я ДЕЛАЮ -->
+			<div class="work__catalog container">
+				<h2 class="work__catalog-name">Что я делаю</h2>
+
+				<ul class="work__catalog-list">
+					<li class="work__catalog-list--element tools">
+						Верстка лендинг страниц и сайтов любой сложности
+					</li>
+
+					<li class="work__catalog-list--element responsive">
+						Адаптивная верстка под все браузеры и устройства
+					</li>
+
+					<li class="work__catalog-list--element programming">
+						Frontend - разработка и программирование
+					</li>
+
+					<li class="work__catalog-list--element coding">
+						Исправление и доработка существующей верстки
+					</li>
+				</ul>
+
+				<button class="btn btn--fill preview__btn button-catalog btnOff" data-path="one">Узнать cтоимость</button>
+			</div>
+		</section> <!--ЧТО Я ДЕЛАЮ -->
+
+
+
+		<section class="portfolio" id="portfolio"> 
+		
+			<div class="portfolio__block container">
+				<h2 class="portfolio__block-name">Примеры моих работ</h2> 
+
+					<div class="portfolio__gallery slider-container"> <!-- СЛАЙДЕР ДЛЯ КАРТИНОК -->
+						<button class="swiper-button-prev"></button>
+						<button class="swiper-button-next"></button>
+						<div class="swiper-container">
+							
+							<ul class="swiper-wrapper">
+								<li class="swiper-slide card">
+									<a href="#">
+										<img src="img/work1.jpg" alt="сайт Психолога">
+										<p class="gallery__images-list--item-name">Сайт психолога Веры Антоновой</p>
+									</a>
+								</li>
+								<li class="swiper-slide card">
+									<a href="#">
+										<img src="img/work2.jpg" alt="Сайт магазина">
+										<p class="gallery__images-list--item-name">Сайт магазина детской одежды</p>
+									</a>
+								</li>
+								<li class="swiper-slide card">
+									<a href="">
+										<img src="img/work3.jpg" alt="Сайт рыболовов">
+										<p class="gallery__images-list--item-name">Сайт магазина Рыболов</p>
+									</a>
+								</li>
+							</ul>
+
+							<div class="swiper-pagination"></div>
+						</div>	
+					</div>
+
+				<!-- </div> -->
+				<button class="btn portfolio-btn btn--fill preview__btn button-catalog btnOff" data-path="one">Заказать проект</button> 
+			</div>  
+		</section> 
+
+
+
+		<section class="unit" id="unit"> <!--АДАПТИВНАЯ ВЕРСТКА БЛА БЛА БЛА -->
+			
+				<div class="unit__info">
+					<div class="unit__fly-symbols">
+						<span class="fly-tag fly-unit fly-unit--braces"> {&nbsp;} </span>
+						<span class="fly-tag fly-unit fly-unit--div"> &lt;div&gt; </span>
+						<span class="fly-tag fly-unit fly-unit--hash"> # </span>
+						<span class="fly-tag fly-unit fly-unit--div2"> &lt;div&gt; </span>
+						<span class="fly-tag fly-unit fly-unit--closed"> &lt;/&gt; </span>
+					</div>
+				<h2 class="unit__info-text">
+					Адаптивная верстка под все устройства и&nbsp;браузеры от 1000 рублей всего за 4 часа.*
+				</h2>
+				<p class="unit__info-addition">
+					*Срок и стоимость могут отличаться от заявленных и рассчитываются индивидуально, в&nbsp;зависимости&nbsp;от&nbsp;сложности задач.
+				</p>
+			</div>
+		</section> <!--АДАПТИВНАЯ ВЕРСТКА БЛА БЛА БЛА -->
+		
+	</main>
+
+	<footer class="footer"> 
+		<div class="footer__block container">
+			<nav class="header__nav-menu nav">
+				<ul class="menu footer__list">
+					<li class="footer__list-menu menu__item">
+						<a href="#work">Услуги</a>
+					</li>
+
+					<li class="footer__list-menu menu__item">
+						<a href="#portfolio">Портфолио</a>
+					</li>
+
+					<li class="footer__list-menu menu__item">
+						<a href="#unit">Стоимость</a>
+					</li>
+				</ul>
+			</nav>
+
+			<div class="contacts footer__contacts">
+				<a href="tel:+7(499)995-77-55" class="footer__contacts-phone">+7 (499) 995-77-55</a>
+
+				<a href="mailto:dmitry@alekseev.com" class="footer__contacts-mail">
+					dmitry@alekseev.com
+				</a>
+			</div>
+
+			<div class="footer__socials">
+				<button class="btn footer-button btn--border button-reset btnOff" data-path="one">Заказать звонок</button>
+				<ul class="footer__socials-icon">
+					<li><a class="socials-back footer__socials-vk" href="https://vk.com/feed" target="_blank"></a></li>
+					<li><a class="socials-back footer__socials-fb" href="https://www.facebook.com/" target="_blank"></a></li>
+					<li><a class="socials-back footer__socials-tw" href="https://twitter.com/home" target="_blank"></a></li>
+					<li><a class="socials-back footer__socials-ig" href="https://www.instagram.com/" target="_blank"></a></li>
+				</ul>
+			</div>
+		</div>
+
+		<div class="footer__black-bar">
+			<p class="footer__person">
+				© Дмитрий Алексеев, 2016 – 2018
+			</p>
+		</div>
+	</footer>
+	<script src="libs/just-validate.min.js"></script>
+	<script src="libs/inputmask.min.js"></script>	
+	<script src="libs/swiper.min.js"></script>
+	<script src="js/slider.js"></script>
+	
+	
+</body>
+</html>
