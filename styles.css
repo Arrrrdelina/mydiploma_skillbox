@@ -420,17 +420,20 @@ a {
 	font-size: 18px;
 }
 
+
+
 .preview__btn {
-	border: none;
-	transition: box-shadow linear 400ms;
+	border: 1px solid #ff4e2e;
+	transition: box-shadow linear 700ms;
+	transition: background linear 2s;
 }
 
 .preview__btn:hover {
 	background: rgba(0,0,0,0);
 	color: #ff4e2e;
 	box-shadow: inset 0 0 0 2px #ff4e2e;
-	transition: box-shadow linear 400ms;
-	
+
+
 }
 
 .preview__photo-img {
@@ -463,8 +466,8 @@ a {
 	position: absolute;
 	display: inline-block;
 	pointer-events: none;
-	
-	
+
+
 }
 
 .fly-preview {
@@ -533,7 +536,7 @@ a {
 	transform: rotate(30deg);
 	left: -130px;
 	top: 10px;
-	
+
 
 }
 
@@ -597,7 +600,7 @@ a {
 	text-align: center;
 	padding-bottom: 90px;
 	font-size: 54px;
-	font-weight: bold; 
+	font-weight: bold;
 }
 
 .work__catalog-list {
@@ -670,7 +673,7 @@ a {
 	text-align: center;
 	padding-bottom: 100px;
 	font-size: 54px;
-	font-weight: bold; 
+	font-weight: bold;
 
 }
 
@@ -683,7 +686,7 @@ a {
 }
 
 .card {
-	
+
 	width: auto;
 	color: #111;
 	font-size: 16px;
@@ -691,7 +694,7 @@ a {
 
 .slider-container {
 	max-width: 1200px;
-	
+
 	position: relative;
 	margin: 0 auto;
 }
@@ -725,12 +728,14 @@ a {
 
 .swiper-button-prev {
 	background-image: url(img/prev.png);
-	border: 1px;
+	border: none;
+	transition: border linear 800ms;
 }
 
 .swiper-button-next {
 	background-image: url(img/next.png);
 	border: none;
+	transition: border linear 800ms;
 }
 
 .swiper-pagination { /*cпрятала кружочки*/
@@ -745,11 +750,19 @@ a {
 	transition: background-color linear 400ms;
 }
 
+
+
 .gallery__images-list--item-name {
 	padding-top: 25px;
 	text-align: center;
 	font-size: 20px;
 	color: #8993ad;
+	transition: border linear 400ms;
+}
+
+.gallery__images-list--item-name:hover {
+	color: #f82370;
+
 }
 
 .portfolio-btn {
@@ -761,30 +774,24 @@ a {
 
 .swiper-pagination-bullet:hover {
 	background-color: white;
-	border: 2px solid #f82370;
+	border: 1px solid #f82370;
 	transition: border linear 400ms;
 }
 
-.swiper-button-prev {
-	transition: border linear 400ms;
-}
 
 .swiper-button-prev:hover {
-	border: 3px solid #f82370;
+	border: 1px solid #f82370;
 	box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
-	transition: border linear 50ms;
 
-} 
 
-.swiper-button-next {
-	transition: border linear 400ms;
 }
+
 
 
 .swiper-button-next:hover {
-	border: 3px solid #f82370;
+	border: 1px solid #f82370;
 	box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
-	transition: border linear 100ms;
+
 }
 
 
