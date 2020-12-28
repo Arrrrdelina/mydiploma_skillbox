@@ -31,24 +31,24 @@ let mySwiper = new Swiper (slider, {
 		1024: {
 			slidesPerView: 2,
         spaceBetween: 10,
-   			
+
 		},
 		1119: {
 			slidesPerView: 3,
     		spaceBetween: 10,
 		}
 	}
-  
+
  });
 
-//------------------------МОБИЛЬНОЕ МЕНЮ 
+//------------------------МОБИЛЬНОЕ МЕНЮ
 
 const menu = document.querySelector('.mobile__menu'),
   burger = document.querySelector('.burger'),
   mobileBack = document.querySelector('.mobile-back'),
   overlay = document.querySelector('.header__overlay');
-  
-  
+
+
 const lockScroll = () => {
   document.body.classList.add('.lock');
 }
@@ -57,7 +57,7 @@ const unlockScroll = () => {
   document.body.classList.remove('.lock');
 }
 
-burger.addEventListener('click', () => {  //34я минутка видоса если что
+burger.addEventListener('click', () => {
   menu.classList.add('open');
   overlay.classList.add('open');
   lockScroll();
@@ -85,8 +85,8 @@ function scrollTo(element) {
   window.scroll({
     behavior: 'smooth',
     left: 0,
-    top: element.offsetTop -  //прокрутка - offsetTop
-    document.querySelector('.nav').clientWidth + 400, //с помощью прибавления добавили больше прокрутки
+    top: element.offsetTop -
+    document.querySelector('.nav').clientWidth + 400,
 
   });
 }
@@ -104,12 +104,6 @@ anchors.forEach((el) => {
     scrollTo(document.querySelector(id))
   });
 });
-
-
-
-
-//-----------------ДЛЯ МОДАЛЬНОГО ОКНА
-
 
 
 
@@ -142,7 +136,7 @@ function enableScroll() {
   body.classList.remove('disable-scroll');
   window.scroll({ top: pagePosition, left: 0});
   body.removeAttribute('data-position');
-  
+
 }
 
 
@@ -152,7 +146,7 @@ btns.forEach((el) => {
   el.addEventListener('click', (e) => {
     disableScroll();
     document.querySelector('.form').reset();
-    
+
     let path = e.currentTarget.getAttribute('data-path');
 
     modals.forEach((el) => {
@@ -166,7 +160,7 @@ btns.forEach((el) => {
 
     document.querySelector(`[data-target="${path}"]`).classList.add('modal--visible');
     modalOverlay.classList.add('modal-overlay--visible');
-    
+
   });
 });
 
@@ -204,7 +198,7 @@ let inputs = document.querySelectorAll('input[type="tel"]');
 let im = new Inputmask('+7 (999) 999-99-99');
 im.mask(inputs);
 
-//validate 
+//validate
 function validateForms(selector, rules) {
   new window.JustValidate(selector, {
     rules: rules,
@@ -218,14 +212,14 @@ function validateForms(selector, rules) {
       xhr.onreadystatechange = function() {
         if (xhr.readyState === 4) {
           if (xhr.status === 200){
-            console.log('Отправлено'); 
-            
+            console.log('Отправлено');
+
             modals.forEach((el) => {
             	el.classList.remove('modal--visible');
 						});
 						send.classList.add('send--visible');
 
-            
+
           }
         }
       }
@@ -235,7 +229,7 @@ function validateForms(selector, rules) {
       xhr.send(formData);
       disableScroll();
       form.reset();
-      
+
     }
   });
 }
